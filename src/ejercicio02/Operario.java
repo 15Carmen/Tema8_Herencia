@@ -21,6 +21,6 @@ public class Operario extends Empleado{
      */
     @Override
     public String toString() {
-        return "Empleado: " + getNombre() + " -> Operario";
+        return super.toString() + " -> Operario";
     }
 }

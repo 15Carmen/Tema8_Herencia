@@ -20,6 +20,6 @@ public class Tecnico extends Operario{
      */
     @Override
     public String toString() {
-        return "Empleado: " + getNombre() + " -> Operario -> Tecnico";
+        return super.toString() + " -> Tecnico";
     }
 }

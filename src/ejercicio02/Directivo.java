@@ -21,7 +21,7 @@ public class Directivo extends Empleado{
      */
     @Override
     public String toString() {
-        return "Empleado: " + getNombre() + " -> Directivo";
+        return super.toString() + " -> Directivo";
     }
 
 }

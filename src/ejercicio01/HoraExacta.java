@@ -44,16 +44,7 @@ public class HoraExacta extends Hora{
         if (segundo == 60) {      // Si el segundo es 60
             // Pone el segundo a 0 e incrementa el minuto en 1
             segundo = 0;
-            minuto++;
-            if (minuto == 60) {   // Si el minuto es 60
-                // Pone el minuto a 0 e incrementa la hora en 1
-                minuto = 0;
-                hora++;
-                if (hora == 24) {   // Si la hora es 24
-                    // Pone la hora a 0
-                    hora = 0;
-                }
-            }
+            super.inc();
         }
     }
 
