@@ -7,19 +7,19 @@ public class Electrodomestico {
     /**
      * Atributo que guarda el precio base del electrodomestico
      */
-    private double precioBase;
+    double precioBase;
 
     /**
      * Atributo que guarda el color del electrodomestico
      */
-    private enum ColorPermitido {blanco, negro, rojo, azul, gris}
-    private String color;
+    public enum ColorPermitido {blanco, negro, rojo, azul, gris}
+    String color;
 
     /**
      * Atributo que guarda el consumo energetico del electrodomestico
      */
     public enum ConsumoEnergeticoPermitido {A, B, C, D, E, F}
-    private ConsumoEnergeticoPermitido consumoEnergetico;
+    ConsumoEnergeticoPermitido consumoEnergetico;
 
 
     /**
@@ -90,7 +90,16 @@ public class Electrodomestico {
         this.peso = peso;
     }
 
-    //Declaramos los métodos de la clase
+    //Declaramos el método toString
+
+
+    @Override
+    public String toString() {
+
+        String cadena = "precioBase: " + precioBase + "€, color:" + color + ", consumo energetico: " + consumoEnergetico +
+                ", peso: " + peso + "kg, precio final: " + precioFinal() + "€" ;
+        return cadena;
+    }
 
     /**
      * Método que comprueba que la letra introducida se encuentra entre las letras del enum ConsumoEnergeticoPermitido
@@ -99,7 +108,9 @@ public class Electrodomestico {
      * @return true si la letra se encuentra en el enum, false si no se encuentra
      */
     private boolean comprobarConsumoEnergetico(char letra){
+
         boolean encontrado = false;
+
         for (ConsumoEnergeticoPermitido consumo : ConsumoEnergeticoPermitido.values()) {
             if (consumo.name().equals(String.valueOf(letra))) {
                 encontrado = true;
@@ -117,7 +128,9 @@ public class Electrodomestico {
      * @return true si el color se encuentra en el enum, false si no se encuentra
      */
     private boolean comprobarColor(String color){
+
         boolean encontrado = false;
+
         for (ColorPermitido colorPermitido : ColorPermitido.values()) {
             if (colorPermitido.name().equals(color.toLowerCase())) {
                 encontrado = true;

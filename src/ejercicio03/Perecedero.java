@@ -6,7 +6,7 @@ public class Perecedero extends Producto{
     /**
      * Atributo que guarda el número de días que tiene el producto para caducar
      */
-    private int diasCaducar;
+    int diasCaducar;
 
     //Declaramos los constructores de la clase
     /**
@@ -46,5 +46,18 @@ public class Perecedero extends Producto{
     @Override
     public String toString() {
         return super.toString() + " Producto perecedero -> Días para caducar: " + diasCaducar;
+    }
+
+    @Override
+    public double calcularPrecio(int cantidad) {
+        double total = super.calcularPrecio(cantidad);
+
+        switch (diasCaducar) {
+            case 1 -> total = total * 0.15;
+            case 2 -> total = total * 0.10;
+            case 3 -> total = total * 0.05;
+        }
+
+        return total;
     }
 }

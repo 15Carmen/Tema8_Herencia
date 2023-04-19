@@ -6,7 +6,7 @@ public class NoPerecedero extends Producto{
     /**
      * Atributo que guarda el tipo de producto
      */
-    private String tipo;
+    String tipo;
 
     //Declaramos los constructores de la clase
     /**

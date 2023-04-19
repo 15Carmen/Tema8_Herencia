@@ -1,11 +1,6 @@
 package ejercicio02;
 
 public class Oficial extends Operario{
-    /**
-     * Constructor por defecto de la clase Oficial
-     */
-    public Oficial() {
-    }
 
     /**
      * Constructor con parámetros de la clase Oficial

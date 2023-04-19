@@ -1,12 +1,6 @@
 package ejercicio02;
 
 public class Operario extends Empleado{
-    /**
-     * Constructor por defecto de la clase Operario
-     */
-    public Operario() {
-
-    }
 
     /**
      * Constructor con parámetros de la clase Operario

@@ -24,7 +24,7 @@ public class Lavadora extends Electrodomestico {
      */
     public Lavadora(double precioBase, double peso, double carga) {
         super(precioBase, peso);
-        this.carga = 5;
+        this.carga = carga;
     }
 
 
@@ -47,15 +47,29 @@ public class Lavadora extends Electrodomestico {
         this.carga = carga;
     }
 
+    //Declarmos el método toString
+
+
+    @Override
+    public String toString() {
+        String cadena = "Lavadora: " + super.toString();
+        cadena += ", carga: " + carga + "kg";
+
+        return cadena;
+    }
+
     /**
      * Método que devuelve el precio final de la lavadora
      */
-
     public double precioFinal() {
+        // Llamamos al método precioFinal de la clase padre y lo guardamos en una variable
         double precioFinal = super.precioFinal();
+
+        //Si la carga es mayor que 30 kg, se incrementa el precio en 50€
         if (carga > 30) {
             precioFinal += 50;
         }
+        // Devolvemos el precio final
         return precioFinal;
     }
 }

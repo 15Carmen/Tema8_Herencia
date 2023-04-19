@@ -6,11 +6,11 @@ public class Producto {
     /**
      * Atributo que guarda el nombre del producto
      */
-    private String nombre;
+    String nombre;
     /**
      * Atributo que guarda el precio del producto
      */
-    private double precio;
+    double precio;
 
     //Declaramos los constructores de la clase
     /**
@@ -45,6 +45,10 @@ public class Producto {
     }
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    public double calcularPrecio(int cantidad) {
+        return cantidad*precio;
     }
 
     //Declaramos el método toString de la clase

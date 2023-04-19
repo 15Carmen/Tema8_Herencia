@@ -3,12 +3,6 @@ package ejercicio02;
 public class Directivo extends Empleado{
 
     /**
-     * Constructor por defecto de la clase Directivo
-     */
-    public Directivo() {
-    }
-
-    /**
      * Constructor con parámetros de la clase Directivo
      */
     public Directivo(String nombre) {
