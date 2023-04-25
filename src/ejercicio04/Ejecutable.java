@@ -1,4 +1,4 @@
-package ejercicio4;
+package ejercicio04;
 
 /**
  * Clase principal del ejercicio 4

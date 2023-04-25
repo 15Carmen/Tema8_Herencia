@@ -1,4 +1,4 @@
-package ejercicio4;
+package ejercicio04;
 
 public class Television extends Electrodomestico{
     // Declaramos los atributos de la clase
