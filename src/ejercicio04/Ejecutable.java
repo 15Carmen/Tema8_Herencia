@@ -26,7 +26,6 @@ public class Ejecutable {
         Electrodomestico t3 = new Television(300, 60, 70, false);
 
        //Introducimos los objetos que acabamos de crear en el array
-
         arrayElec[0] = e1;
         arrayElec[1] = e2;
         arrayElec[2] = e3;
@@ -37,8 +36,9 @@ public class Ejecutable {
         arrayElec[7] = t2;
         arrayElec[8] = t3;
 
+        //Recorremos el array y lo mostramos por pantalla
         for (Electrodomestico elec: arrayElec) {
-           if(elec != null){
+           if(elec != null){    //Siempre y cuando laa celda del array no sea nula
                System.out.println(elec);
            }
         }
